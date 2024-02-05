@@ -7,6 +7,7 @@ import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.model.games.validators
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.model.players.opponents.Opposable;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.UserInteraction;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.View;
+import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.application.ApplicationType;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.container.ViewContainer;
 
 public class Connect4 extends AbstractGame {
@@ -34,5 +35,10 @@ public class Connect4 extends AbstractGame {
     @Override
     protected String createExitMessage() {
         return null;
+    }
+
+    @Override
+    public void setViewMode(ApplicationType viewType) {
+
     }
 }

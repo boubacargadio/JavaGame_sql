@@ -1,29 +1,32 @@
-package fr.lecampusnumerique.cda25.javaalgo.squaregame.program.account;
+package fr.lecampusnumerique.cda25.javaalgo.squaregame.program.model.profile;
 
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.model.DbAccess;
-import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.model.profile.ProfileDTO;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.model.persistence.DAO;
 
 import java.util.List;
 
-public class ProfileDAO implements DAO<ProfileDTO, Long> {
+public class SqlProfileDAO implements ProfileDAO {
 
-    private static ProfileDAO instance;
+    private static SqlProfileDAO instance;
 
-    public static ProfileDAO getInstance() {
-        if(instance == null) instance = new ProfileDAO();
+    public static SqlProfileDAO getInstance() {
+        if(instance == null) instance = new SqlProfileDAO();
         return instance;
     }
 
     private DbAccess dbAccess = DbAccess.getInstance();
 
-    private ProfileDAO() {
+    private SqlProfileDAO() {
         //TODO initialize connection to database
 
     }
 
     @Override
     public ProfileDTO findById(Long aLong) {
+        return null;
+    }
+
+    public ProfileDTO findByEmail(String email) {
         return null;
     }
 

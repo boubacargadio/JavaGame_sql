@@ -48,7 +48,7 @@ Pour ce faire :
 Une fois cette première étape de faite, place au code :
 
 * développez la classe DbAccess située dans program/model/
-* développez les méthodes de la classe ProfileDAO située dans program/account/
+* développez les méthodes de la classe SqlProfileDAO située dans program/model/profile
 
 Pour testez vos développements, lancer le programme, les vues en consoles accessibles dans le menu profile vous aideront bien.
 
@@ -61,7 +61,11 @@ Et si l'envie vous en prend, faîtes évoluer le projet pour intégrer des sauve
 
 ### Connexion API
 
-Sauvegardes 
+Sauvegarder sur une base SQL, pas très pratique, une API c'est quand même mieux. 
+
+Votre API développée avec Spring sera quand même plus pratique.
+
+Développez une varioante de votre DAO permettant de faire la même chose mais en prenant les données depuis votre API.
 
 ### Développement des jeux
 

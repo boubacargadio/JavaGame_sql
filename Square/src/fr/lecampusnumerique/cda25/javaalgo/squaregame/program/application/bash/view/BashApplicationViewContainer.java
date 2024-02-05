@@ -47,4 +47,14 @@ public class BashApplicationViewContainer implements ViewContainer {
         removeContent(out);
         addContent(in);
     }
+
+    @Override
+    public void show() {
+
+    }
+
+    @Override
+    public void hide() {
+
+    }
 }

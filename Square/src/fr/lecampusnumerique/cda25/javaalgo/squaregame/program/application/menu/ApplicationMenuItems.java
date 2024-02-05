@@ -1,7 +1,7 @@
 package fr.lecampusnumerique.cda25.javaalgo.squaregame.program.application.menu;
 
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.account.create.ProfileCreationController;
-import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.account.read.ProfileLoadingController;
+import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.account.show.ShowProfileController;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.account.update.ProfileUpdateController;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.controller.Controller;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.games.connect4.Connect4;
@@ -29,20 +29,23 @@ public enum ApplicationMenuItems implements GameMenuItem {
     // Profile submenu
     CREATE_PROFILE(PROFILE, "Create profile", "Create profile information", 'c', ProfileCreationController.class),
     UPDATE_PROFILE(PROFILE, "Update profile", "Update profile information", 'u', ProfileUpdateController.class),
-    VIEW_PROFILE(PROFILE, "View profile", "View profile information", 'e', ProfileLoadingController.class),
+    VIEW_PROFILE(PROFILE, "View profile", "View profile information", 'v', ShowProfileController.class),
     DELETE_PROFILE(PROFILE, "Delete profile", "Delete profile information", 'd', ProfileUpdateController.class),
     PROFILE_BACK(PROFILE, "Back", "Return to Main menu", 'b'),
 
 
+    PROFILE_CREATION_SAVE(CREATE_PROFILE, "Save", "Save profile", 's'),
     PROFILE_CREATION_BACK(CREATE_PROFILE, "Back", "Return to Profile menu", 'b'),
 
 
+    PROFILE_UPDATE_SAVE(CREATE_PROFILE, "Save", "Save profile", 's'),
     PROFILE_UPDATE_BACK(UPDATE_PROFILE, "Back", "Return to Profile menu", 'b'),
 
+    PROFILE_VIEW_LOAD(VIEW_PROFILE, "Load", "Load profile", 'l'),
+    PROFILE_VIEW_BACK(VIEW_PROFILE, "Back", "Return to  Profile menu", 'b'),
 
-    PROFILE_EDITION_BACK(VIEW_PROFILE, "Back", "Return to  Profile menu", 'b'),
 
-
+    PROFILE_DELETION_SAVE(PROFILE_BACK, "Remove", "Remove current profile", 'r'),
     PROFILE_DELETION_BACK(PROFILE_BACK, "Back", "Return to  Profile menu", 'b'),
 
 

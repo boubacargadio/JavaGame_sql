@@ -1,30 +1,15 @@
 package fr.lecampusnumerique.cda25.javaalgo.squaregame.program.model.profile;
 
-import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.model.persistence.AbstractDTO;
-import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.model.persistence.DTO;
+import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.model.profile.ProfileDTO;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.model.utils.ClassAttributesStringFactory;
 
-public class ProfileDTO extends AbstractDTO<Long> {
+public class Profile {
 
-    private long id;
     private String first_name;
     private String last_name;
     private String email;
     private String picture;
     private String telephone;
-
-    public ProfileDTO() {
-    }
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    @Override
-    public void setId(Long id) {
-        this.id = (Long)id;
-    }
 
     public String getFirst_name() {
         return first_name;
@@ -66,8 +51,7 @@ public class ProfileDTO extends AbstractDTO<Long> {
         this.telephone = telephone;
     }
 
-    public ProfileDTO(long id, String first_name, String last_name, String email, String picture, String telephone) {
-        this.id = id;
+    public Profile(String first_name, String last_name, String email, String picture, String telephone) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
@@ -75,4 +59,8 @@ public class ProfileDTO extends AbstractDTO<Long> {
         this.telephone = telephone;
     }
 
+    @Override
+    public String toString() {
+        return ClassAttributesStringFactory.makeString(this);
+    }
 }

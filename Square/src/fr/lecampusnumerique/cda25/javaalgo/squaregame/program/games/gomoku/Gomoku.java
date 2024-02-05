@@ -8,6 +8,7 @@ import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.model.games.validators
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.model.players.opponents.Opposable;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.UserInteraction;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.View;
+import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.application.ApplicationType;
 
 public class Gomoku extends AbstractGame {
 
@@ -32,5 +33,10 @@ public class Gomoku extends AbstractGame {
     @Override
     protected String createExitMessage() {
         return null;
+    }
+
+    @Override
+    public void setViewMode(ApplicationType viewType) {
+
     }
 }

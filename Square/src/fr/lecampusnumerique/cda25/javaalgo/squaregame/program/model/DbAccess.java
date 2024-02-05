@@ -12,4 +12,6 @@ public class DbAccess {
     private DbAccess() {
         //TODO generate everything you need for db connection
     }
+
+    // créer une méthode publique qui retourne un connecteur à la base de données
 }

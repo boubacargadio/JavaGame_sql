@@ -8,6 +8,7 @@ import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.application.liste
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.UserInteraction;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.View;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.application.menu.ApplicationMenu;
+import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.container.Containable;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.view.exception.IncorrectInputException;
 
 import java.util.ArrayList;
@@ -147,5 +148,30 @@ public class BashApplicationMenu implements ApplicationMenu {
     public void clear() {
         this.observers.clear();
         this.view.clear();
+    }
+
+    @Override
+    public void show() {
+
+    }
+
+    @Override
+    public void hide() {
+
+    }
+
+    @Override
+    public void addContent(Containable containable) {
+
+    }
+
+    @Override
+    public void removeContent(Containable containable) {
+
+    }
+
+    @Override
+    public void switchContent(Containable in, Containable out) {
+
     }
 }
