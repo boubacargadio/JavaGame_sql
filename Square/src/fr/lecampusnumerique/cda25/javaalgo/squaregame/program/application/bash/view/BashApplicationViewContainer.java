@@ -30,7 +30,7 @@ public class BashApplicationViewContainer implements ViewContainer {
     public void addContent(Containable containable) {
         if(containable != null) {
             containables.add(containable);
-            containable.show();
+//            containable.show();
         }
     }
 

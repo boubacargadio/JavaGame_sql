@@ -10,6 +10,16 @@ public class ProfileManager {
 
     private Profile current;
 
+    private long current_id = -1;
+
+    public long getCurrent_id() {
+        return current_id;
+    }
+
+    public boolean isConnected(){
+        return current_id >=0;
+    }
+
     public Profile getCurrent() {
         if(current == null){
             current = new Profile(DEFAULT_FIRST_NAME, DEFAULT_LAST_NAME, DEFAULT_STRING, DEFAULT_STRING, DEFAULT_STRING);
@@ -30,12 +40,14 @@ public class ProfileManager {
     public void setCurrentById(Long id) throws PersistenceAccessException {
         ProfileDTO dto = SqlProfileDAO.getInstance().findById(id);
         current = convert(dto);
+        current_id = dto.getId();
     }
 
 
     public void setCurrentByEmail(String email) throws PersistenceAccessException {
         ProfileDTO dto = SqlProfileDAO.getInstance().findByEmail(email);
         current = convert(dto);
+        current_id = dto.getId();
     }
 
     public static Profile convert(ProfileDTO dto){

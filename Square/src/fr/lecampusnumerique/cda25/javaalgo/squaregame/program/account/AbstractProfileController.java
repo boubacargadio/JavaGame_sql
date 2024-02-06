@@ -1,18 +1,15 @@
 package fr.lecampusnumerique.cda25.javaalgo.squaregame.program.account;
 
-import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.model.profile.Profile;
-import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.model.profile.ProfileDAO;
-import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.model.profile.SqlProfileDAO;
-import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.model.profile.ProfileManager;
+import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.model.profile.*;
 import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.controller.AbstractInternalController;
 
 public abstract class AbstractProfileController extends AbstractInternalController {
 
 
-    private final Profile current = ProfileManager.getInstance().getCurrent();
+    private final ProfileManager profileManager = ProfileManager.getInstance();
 
     protected Profile getCurrent() {
-        return current;
+        return profileManager.getCurrent();
     }
 
     private final ProfileDAO profileDAO = SqlProfileDAO.getInstance();
@@ -26,4 +23,7 @@ public abstract class AbstractProfileController extends AbstractInternalControll
     }
 
 
+    protected ProfileManager getProfileManager() {
+        return profileManager;
+    }
 }

@@ -31,6 +31,16 @@ public class SqlProfileDAO implements ProfileDAO {
     }
 
     @Override
+    public ProfileDTO findByEmailAndPassword(String email, String passsword) {
+        return null;
+    }
+
+    @Override
+    public boolean updatePassword(String email, String oldPass, String newPass) {
+        return false;
+    }
+
+    @Override
     public List<ProfileDTO> findAll() {
         return null;
     }

@@ -59,8 +59,21 @@ public class Profile {
         this.telephone = telephone;
     }
 
+    public Profile(){
+
+    }
+
     @Override
     public String toString() {
         return ClassAttributesStringFactory.makeString(this);
     }
+
+    public ProfileDTO extractDTO(){
+        return extractDTO(-1);
+    }
+
+    public ProfileDTO extractDTO(long id){
+        return new ProfileDTO(id, getFirst_name(), getLast_name(), getEmail(), getPicture(), getTelephone());
+    }
+
 }

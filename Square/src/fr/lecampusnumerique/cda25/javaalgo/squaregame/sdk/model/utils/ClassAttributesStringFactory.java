@@ -1,20 +1,18 @@
 package fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.model.utils;
 
-import fr.lecampusnumerique.cda25.javaalgo.squaregame.program.model.profile.Profile;
-import fr.lecampusnumerique.cda25.javaalgo.squaregame.sdk.model.persistence.DTO;
-
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ClassAttributesStringFactory {
 
-    public static String[] getFieldsFrom(Object o) {
+    public static List<Field> getFieldsFrom(Object o){
+        if(o != null) return List.of(o.getClass().getDeclaredFields());
+        return new ArrayList<>();
+    }
+
+    public static String[] getFieldsNameFrom(Object o) {
         final List<String> lines = new ArrayList<>();
-        Class<? extends DTO> ob = DTO.class;
-        Method[] methods = ob.getDeclaredMethods();
-        List<Field> fields = List.of(o.getClass().getFields());
         for (final Field field: o.getClass().getDeclaredFields()) {
             field.setAccessible(true);
             try {
@@ -31,7 +29,7 @@ public class ClassAttributesStringFactory {
 
         builder.append(":\n");
 
-        for (final String field : getFieldsFrom(o)) {
+        for (final String field : getFieldsNameFrom(o)) {
             builder.append(field);
             builder.append("\n");
         }

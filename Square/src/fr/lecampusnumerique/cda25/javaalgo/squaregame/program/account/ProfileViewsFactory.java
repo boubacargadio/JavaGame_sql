@@ -12,13 +12,13 @@ public class ProfileViewsFactory {
     public static ShowProfileView createShowProfileView(ApplicationType type){
         if(type == ApplicationType.BASH)
             return new BashProfileShowView();
-        return null;
+        return new BashProfileShowView();
     }
 
     public static ShowProfileMenu createShowProfileMenu(ApplicationType type){
         if(type == ApplicationType.BASH)
             return new BashProfileShowMenu();
-        return null;
+        return new BashProfileShowMenu();
     }
 
 }

@@ -54,7 +54,7 @@ public abstract class AbstractInternalController implements InternalController, 
     public void setViewMode(ApplicationType viewType) {
         clear();
         this.viewType = viewType;
-        show();
+//        show();
     }
 
     protected ApplicationType getViewMode(){
@@ -106,7 +106,7 @@ public abstract class AbstractInternalController implements InternalController, 
                 this.currentView.hide();
                 this.currentView = null;
             }
-            this.show();
+//            this.show();
         }
     }
 

@@ -82,7 +82,7 @@ public abstract class AbstractApplication implements Application, MenuObserver {
     public void addContent(Containable containable) {
         if(containable != null){
             controllers.add(containable);
-            containable.show();
+//            containable.show();
         }
     }
 
