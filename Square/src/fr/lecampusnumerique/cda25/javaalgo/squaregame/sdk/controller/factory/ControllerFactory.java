@@ -8,15 +8,15 @@ import java.lang.reflect.Constructor;
 
 public class ControllerFactory {
 
-    @org.jetbrains.annotations.NotNull
-    @org.jetbrains.annotations.Contract("null -> fail")
+//    @org.jetbrains.annotations.NotNull
+//    @org.jetbrains.annotations.Contract("null -> fail")
     public static InternalController createInternalController(GameMenuItem item) throws ControllerFactoryException{
         return createInternalController(item, ApplicationType.BASH);
     }
 
 
-    @org.jetbrains.annotations.NotNull
-    @org.jetbrains.annotations.Contract("null -> fail")
+//    @org.jetbrains.annotations.NotNull
+//    @org.jetbrains.annotations.Contract("null -> fail")
     public static InternalController createInternalController(GameMenuItem item, ApplicationType type) throws ControllerFactoryException{
         if(item == null || item.getControllerClass() == null)
             throw new ControllerFactoryException("Item or associated controller is null, impossible to instantiate a controller!");
